@@ -1,0 +1,89 @@
+{{- if .Values.ingest.enabled }}
+{{- range .Values.ingest.jobs }}
+---
+# Knowledge-base ingestion (scripts/ingest.ts) as a CronJob: same image, env and
+# secrets as the API, but crawling never runs inside API pods (memory / latency).
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ $.Values.app }}-ingest-{{ .name }}
+  namespace: {{ $.Values.namespace }}
+  labels:
+    app: {{ $.Values.app }}
+    component: ingest
+    job: {{ .name }}
+spec:
+  schedule: {{ .schedule | quote }}
+  {{- with $.Values.ingest.timeZone }}
+  timeZone: {{ . | quote }}
+  {{- end }}
+  concurrencyPolicy: {{ $.Values.ingest.concurrencyPolicy | default "Forbid" }}
+  successfulJobsHistoryLimit: {{ $.Values.ingest.successfulJobsHistoryLimit | default 3 }}
+  failedJobsHistoryLimit: {{ $.Values.ingest.failedJobsHistoryLimit | default 3 }}
+  startingDeadlineSeconds: {{ $.Values.ingest.startingDeadlineSeconds | default 600 }}
+  jobTemplate:
+    spec:
+      backoffLimit: {{ $.Values.ingest.backoffLimit | default 1 }}
+      {{- with .activeDeadlineSeconds }}
+      activeDeadlineSeconds: {{ . }}
+      {{- end }}
+      template:
+        metadata:
+          labels:
+            app: {{ $.Values.app }}
+            component: ingest
+            job: {{ .name }}
+        spec:
+          restartPolicy: Never
+          {{- if $.Values.serviceAccount.create }}
+          serviceAccountName: {{ $.Values.serviceAccount.name }}
+          {{- end }}
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: {{ $.Values.securityContext.runAsUser }}
+            runAsGroup: {{ $.Values.securityContext.runAsUser }}
+          containers:
+            - name: ingest
+              image: "{{ $.Values.repository.image }}/{{ $.Values.repository.name }}:{{ $.Values.repository.tag }}"
+              imagePullPolicy: {{ $.Values.repository.pullPolicy }}
+              command: ["bun", "run", "scripts/ingest.ts"]
+              args:
+                {{- toYaml .args | nindent 16 }}
+                - "--run-kind"
+                - "cron"
+              securityContext:
+                allowPrivilegeEscalation: false
+              envFrom:
+                - configMapRef:
+                    name: {{ $.Values.app }}-configmap
+                {{- if $.Values.externalSecret.enabled }}
+                - secretRef:
+                    name: {{ $.Values.externalSecret.name }}
+                {{- end }}
+                # Same optional CRM Secret the deployment mounts. The ConfigMap is shared, so once
+                # CRM_MCP_URL is set there the env schema also demands CRM_EXCHANGE_SECRET; without
+                # this ref every ingest run died at loadEnv (observed in prod, Sept 2026).
+                - secretRef:
+                    name: {{ $.Values.app }}-crm
+                    optional: true
+              {{- if $.Values.externalSecret.enabled }}
+              volumeMounts:
+                - name: secrets-store
+                  mountPath: /mnt/secrets-store
+                  readOnly: true
+              {{- end }}
+              {{- with $.Values.ingest.resources }}
+              resources:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
+          {{- if $.Values.externalSecret.enabled }}
+          volumes:
+            - name: secrets-store
+              csi:
+                driver: secrets-store.csi.k8s.io
+                readOnly: true
+                volumeAttributes:
+                  secretProviderClass: {{ $.Values.externalSecret.name }}
+          {{- end }}
+{{- end }}
+{{- end }}

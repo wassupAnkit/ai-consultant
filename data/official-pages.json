@@ -1,0 +1,2344 @@
+{
+  "version": "2026-10-12",
+  "note": "Curated official pages crawled nightly into the knowledge base (src/ingest/official.ts). Facts-register URLs (docs/facts/*.md) are added automatically; do not repeat them here.",
+  "pages": [
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/length-of-stay",
+      "label": "Student visa (500): length of stay by course",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/welfare-arrangements-students-under-18",
+      "label": "Student visa (500): welfare arrangements for students under 18",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "family_planning"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/education-provider-default",
+      "label": "Student visa: when your education provider defaults",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590",
+      "label": "Changes to student visa application rules (500 and 590)",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "policy_change",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/changes-to-student-visa-application-rules-500-590/applying-in-australia",
+      "label": "Student visa: applying onshore in Australia (visitor/485 holders)",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "onshore_support",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
+      "label": "Temporary Graduate visa (485): overview",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/australian-study-requirement",
+      "label": "Temporary Graduate visa (485): Australian study requirement",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/meeting-the-temporary-graduate-visa-subclass-485-study-requirement",
+      "label": "Temporary Graduate visa (485): eligible qualifications and study requirement",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/changes",
+      "label": "Temporary Graduate visa (485): program changes",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "policy_change",
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/english-language",
+      "label": "English language requirements and accepted tests (Home Affairs)",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "test_preparation",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/health/adequate-health-insurance",
+      "label": "Adequate health insurance (OSHC) requirement",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/health/what-health-examinations-you-need",
+      "label": "Visa health examinations you need",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/character",
+      "label": "Character requirements and police certificates",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation",
+        "visa_risk_analysis"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/see-your-visa-conditions?product=500",
+      "label": "Student visa (500) conditions incl. 8105 work and 8202 study",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "work_survival",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/change-in-situation/study-situation",
+      "label": "Change in study situation (change of provider or course)",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "onshore_support",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189/points-table",
+      "label": "Skilled Independent visa (189): points table",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/help-support/australian-government-migration-policy-changes",
+      "label": "Australian Government migration policy changes",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/working-in-australia/skill-occupation-list",
+      "label": "Skilled occupation list",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/providing-accurate-information",
+      "label": "Providing accurate information (bogus documents, PIC 4020)",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "compliance_ethics",
+        "visa_risk_analysis"
+      ]
+    },
+    {
+      "url": "https://www.studyaustralia.gov.au/en/plan-your-move/overseas-student-health-cover-oshc",
+      "label": "Study Australia: Overseas Student Health Cover (OSHC)",
+      "country": "australia",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.studyaustralia.gov.au/en/life-in-australia/living-and-education-costs",
+      "label": "Study Australia: living and education costs",
+      "country": "australia",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.studyaustralia.gov.au/en/plan-your-studies/changing-your-course-or-provider",
+      "label": "Study Australia: changing your course or provider",
+      "country": "australia",
+      "authority": "student_portal",
+      "topics": [
+        "onshore_support",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www.studyaustralia.gov.au/en/work-in-australia/work-rights-and-responsibilities",
+      "label": "Study Australia: work rights and responsibilities",
+      "country": "australia",
+      "authority": "student_portal",
+      "topics": [
+        "work_survival"
+      ]
+    },
+    {
+      "url": "https://www.studyaustralia.gov.au/en/plan-your-move/bringing-your-family",
+      "label": "Study Australia: bringing your family",
+      "country": "australia",
+      "authority": "student_portal",
+      "topics": [
+        "family_planning"
+      ]
+    },
+    {
+      "url": "https://costofliving.studyaustralia.gov.au/",
+      "label": "Study Australia cost of living calculator",
+      "country": "australia",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://cricos.education.gov.au/Course/CourseSearch.aspx",
+      "label": "CRICOS course search",
+      "country": "australia",
+      "authority": "education_regulator",
+      "topics": [
+        "program_selection",
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://privatehealth.gov.au/health_insurance/overseas/overseas_student_health_cover.htm",
+      "label": "privatehealth.gov.au: Overseas Student Health Cover",
+      "country": "australia",
+      "authority": "government",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/student-visa/documents-you-must-provide",
+      "label": "Student visa: documents you must provide (CAS, funds, TB)",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/student-visa/extend-your-visa",
+      "label": "Student visa: extend your visa",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/student-visa/switch-to-this-visa",
+      "label": "Student visa: switch to a Student visa",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/student-visa/course",
+      "label": "Student visa: your course and CAS",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "eligibility_check",
+        "offer_enrolment"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/graduate-visa/your-partner-and-children",
+      "label": "Graduate visa: partner and children",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "family_planning"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/graduate-visa/apply",
+      "label": "Graduate visa: how to apply",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/healthcare-immigration-application/who-needs-pay",
+      "label": "IHS: who needs to pay",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/guidance/visa-processing-times-applications-outside-the-uk",
+      "label": "Visa decision waiting times (outside the UK)",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/register-of-licensed-sponsors-students",
+      "label": "Register of licensed student sponsors",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "university_selection",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/guidance/prove-your-english-language-abilities-with-a-secure-english-language-test-selt",
+      "label": "Approved Secure English Language Tests (SELT)",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "test_preparation"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-nepal",
+      "label": "UK TB test: approved clinics in Nepal",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/skilled-worker-visa",
+      "label": "Skilled Worker visa: overview",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://www.ukcisa.org.uk/student-advice/find-your-fee-status/",
+      "label": "UKCISA: find your fee status",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.ukcisa.org.uk/student-advice/finances/funding-your-studies/",
+      "label": "UKCISA: funding your studies",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "scholarship_funding",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.ukcisa.org.uk/student-advice/visas-and-immigration/student-route-eligibility-and-requirements/",
+      "label": "UKCISA: Student route eligibility and requirements",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.ukcisa.org.uk/student-advice/working/student-work/",
+      "label": "UKCISA: working during studies",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "work_survival"
+      ]
+    },
+    {
+      "url": "https://www.ukcisa.org.uk/student-advice/working/graduate-route/",
+      "label": "UKCISA: Graduate route",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://www.ukcisa.org.uk/student-advice/working/working-after-studies/",
+      "label": "UKCISA: working after studies",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://www.ucas.com/international/international-students/applying-to-university-as-an-international-student",
+      "label": "UCAS: applying as an international student",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://www.ucas.com/international/international-students/applying-to-university-as-an-international-student/english-language-tests-elts",
+      "label": "UCAS: English language tests for UK study",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "test_preparation"
+      ]
+    },
+    {
+      "url": "https://www.ucas.com/international/international-students/applying-to-university-as-an-international-student/entry-requirements-for-uk-courses",
+      "label": "UCAS: entry requirements for UK courses",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.ucas.com/applying/applying-to-university/dates-and-deadlines-for-uni-applications",
+      "label": "UCAS: dates and deadlines",
+      "country": "united_kingdom",
+      "authority": "student_portal",
+      "topics": [
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://www.educanada.ca/study-plan-etudes/before-avant/permits-visas-permis.aspx?lang=eng",
+      "label": "EduCanada: study permits and visas",
+      "country": "canada",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.educanada.ca/programs-programmes/education_cost-cout_education.aspx?lang=eng",
+      "label": "EduCanada: cost of education",
+      "country": "canada",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.educanada.ca/live-work-vivre-travailler/work-travail/during-pendant.aspx?lang=eng",
+      "label": "EduCanada: working while studying",
+      "country": "canada",
+      "authority": "student_portal",
+      "topics": [
+        "work_survival"
+      ]
+    },
+    {
+      "url": "https://www.wes.org/eca/",
+      "label": "WES: Educational Credential Assessment (ECA) for IRCC",
+      "country": "canada",
+      "authority": "credential_body",
+      "topics": [
+        "migration_pathway",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.cicic.ca/2/home.canada",
+      "label": "CICIC: Canadian Information Centre for International Credentials",
+      "country": "canada",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://apps.wes.org/ca/degree-equivalency-tool/",
+      "label": "WES Canada degree equivalency tool",
+      "country": "canada",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study",
+      "label": "EducationUSA: your 5 steps to US study",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/finance-your-studies/graduate",
+      "label": "EducationUSA: finance your graduate studies",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability",
+        "scholarship_funding"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/finance-your-studies/undergraduate",
+      "label": "EducationUSA: finance your undergraduate studies",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability",
+        "scholarship_funding"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/apply-your-student-visa/graduate",
+      "label": "EducationUSA: apply for your student visa (graduate)",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/apply-your-student-visa/undergraduate",
+      "label": "EducationUSA: apply for your student visa (undergraduate)",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/complete-your-application/undergraduate",
+      "label": "EducationUSA: complete your undergraduate application",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/find-financial-aid",
+      "label": "EducationUSA: financial aid search",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "scholarship_funding"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/research-your-options",
+      "label": "EducationUSA: research your options",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/prepare-your-departure",
+      "label": "EducationUSA: prepare for your departure",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "lifestyle_adaptation"
+      ]
+    },
+    {
+      "url": "https://www.wes.org/evaluations-and-fees/",
+      "label": "WES: US credential evaluations and fees",
+      "country": "united_states",
+      "authority": "credential_body",
+      "topics": [
+        "document_preparation",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/study/once-you-have-a-student-visa/check-or-change-your-student-visa-conditions/",
+      "label": "Student visa: check or change your conditions",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "compliance_ethics",
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/study/study-visas/funds-transfer-scheme/",
+      "label": "Funds Transfer Scheme (student funds)",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/character-requirements-third-party-checks-and-police-certificates/get-a-police-certificate/",
+      "label": "INZ: get a police certificate",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/health-requirements/who-needs-an-x-ray-or-medical-examination/",
+      "label": "INZ: who needs an X-ray or medical examination",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/study/study-visas/",
+      "label": "INZ: study visa options",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/study/after-you-finish-your-study/",
+      "label": "INZ: after you finish your study",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/",
+      "label": "INZ: evidence and documents for your visa application",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/visas/skilled-migrant-category-resident-visa/",
+      "label": "Skilled Migrant Category resident visa",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/process-to-apply/applying-for-a-visa/providing-evidence-and-documents-to-support-your-visa-application/health-requirements/who-can-get-public-health-care/",
+      "label": "INZ: who can get public health care",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "lifestyle_adaptation",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/visas/pathway-student-visa/",
+      "label": "Pathway student visa",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "program_selection"
+      ]
+    },
+    {
+      "url": "https://www2.nzqa.govt.nz/international/recognise-overseas-qual/",
+      "label": "NZQA: recognition of overseas qualifications",
+      "country": "new_zealand",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check",
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://www2.nzqa.govt.nz/international/recognition-arrangements/",
+      "label": "NZQA: qualification recognition arrangements",
+      "country": "new_zealand",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.employment.govt.nz/starting-employment/rights-and-responsibilities/",
+      "label": "Employment NZ: employment rights and responsibilities",
+      "country": "new_zealand",
+      "authority": "government",
+      "topics": [
+        "work_survival"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190",
+      "label": "Skilled Nominated visa (190)",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://immi.homeaffairs.gov.au/help-support/glossary/how-to-get-police-certificate",
+      "label": "How to get a police certificate (by country)",
+      "country": "australia",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.studyaustralia.gov.au/en/plan-your-studies/how-to-apply-to-study",
+      "label": "Study Australia: how to apply to study",
+      "country": "australia",
+      "authority": "student_portal",
+      "topics": [
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/evisa",
+      "label": "UK eVisas: access and use your immigration status",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/india-tuberculosis-test-clinics-for-a-uk-visa",
+      "label": "UK TB test: approved clinics in India",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-bangladesh",
+      "label": "UK TB test: approved clinics in Bangladesh",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/vietnam-tuberculosis-test-clinics-for-a-uk-visa",
+      "label": "UK TB test: approved clinics in Vietnam",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-the-philippines",
+      "label": "UK TB test: approved clinics in the Philippines",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-thailand",
+      "label": "UK TB test: approved clinics in Thailand",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.officeforstudents.org.uk/for-providers/registering-with-the-ofs/the-ofs-register/",
+      "label": "Office for Students register of providers",
+      "country": "united_kingdom",
+      "authority": "education_regulator",
+      "topics": [
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://www.enic.org.uk/individuals/statement-of-comparability",
+      "label": "UK ENIC: Statement of Comparability",
+      "country": "united_kingdom",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://ircc.canada.ca/english/helpcentre/index-featured-can.asp",
+      "label": "IRCC Help Centre (featured questions)",
+      "country": "canada",
+      "authority": "immigration",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.educanada.ca/live-work-vivre-travailler/index.aspx?lang=eng",
+      "label": "EduCanada: living and working in Canada",
+      "country": "canada",
+      "authority": "student_portal",
+      "topics": [
+        "lifestyle_adaptation",
+        "work_survival"
+      ]
+    },
+    {
+      "url": "https://www.alberta.ca/international-qualifications-assessment",
+      "label": "IQAS (Alberta): international qualifications assessment",
+      "country": "canada",
+      "authority": "credential_body",
+      "topics": [
+        "migration_pathway",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://learn.utoronto.ca/comparative-education-service",
+      "label": "CES (University of Toronto): credential assessment",
+      "country": "canada",
+      "authority": "credential_body",
+      "topics": [
+        "migration_pathway",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.bcit.ca/ices/",
+      "label": "ICES (BCIT): credential evaluation",
+      "country": "canada",
+      "authority": "credential_body",
+      "topics": [
+        "migration_pathway",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://educationusa.state.gov/your-5-steps-us-study/finance-your-studies",
+      "label": "EducationUSA: finance your studies",
+      "country": "united_states",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.irs.gov/individuals/international-taxpayers/foreign-students-scholars-teachers-researchers-and-exchange-visitors",
+      "label": "IRS: foreign students and exchange visitors (tax)",
+      "country": "united_states",
+      "authority": "government",
+      "topics": [
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://naces.org/members/",
+      "label": "NACES member credential evaluators",
+      "country": "united_states",
+      "authority": "credential_body",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.immigration.govt.nz/visas/student-and-trainee-work-visa/",
+      "label": "INZ: student and trainee work visa",
+      "country": "new_zealand",
+      "authority": "immigration",
+      "topics": [
+        "work_survival"
+      ]
+    },
+    {
+      "url": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinic-in-sri-lanka",
+      "label": "UK TB test: approved clinic in Sri Lanka",
+      "country": "united_kingdom",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.ontario.ca/page/ontario-colleges",
+      "label": "Ontario: attestation letter (PAL) for international students",
+      "country": "canada",
+      "authority": "government",
+      "topics": [
+        "document_preparation",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://www2.gov.bc.ca/gov/content/education-training/post-secondary-education/international-education",
+      "label": "British Columbia: international education and PAL",
+      "country": "canada",
+      "authority": "government",
+      "topics": [
+        "document_preparation",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://www.ocas.ca/what-we-do/OntarioAttestationLetterService",
+      "label": "OCAS: Ontario Attestation Letter Service",
+      "country": "canada",
+      "authority": "student_portal",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.quebec.ca/en/education/study-quebec/temporary-selection-studies",
+      "label": "Quebec: temporary selection for studies (CAQ)",
+      "country": "canada",
+      "authority": "government",
+      "topics": [
+        "document_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://india.diplo.de/in-en/service/2756350-2756350",
+      "label": "Germany: student visa requirements (German Missions in India)",
+      "country": "germany",
+      "authority": "foreign_ministry",
+      "topics": [
+        "visa_process",
+        "document_preparation",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://kathmandu.diplo.de/np-en/service/01-visaeinreise/2225320-2225320",
+      "label": "Germany: study visa (German Embassy Kathmandu)",
+      "country": "germany",
+      "authority": "foreign_ministry",
+      "topics": [
+        "visa_process",
+        "document_preparation",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.auswaertiges-amt.de/en/visa-service/buergerservice/faq/08-studentenvisum-606690",
+      "label": "Germany: student visa FAQ (Federal Foreign Office)",
+      "country": "germany",
+      "authority": "foreign_ministry",
+      "topics": [
+        "visa_process",
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://www.auswaertiges-amt.de/en/sperrkonto-388600",
+      "label": "Germany: blocked account (Sperrkonto) for student visa",
+      "country": "germany",
+      "authority": "foreign_ministry",
+      "topics": [
+        "financial_viability",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/",
+      "label": "Germany: proof of funds and student living costs (DAAD)",
+      "country": "germany",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.daad.de/en/studying-in-germany/requirements/overview/",
+      "label": "Germany: study requirements overview (DAAD)",
+      "country": "germany",
+      "authority": "student_portal",
+      "topics": [
+        "eligibility_check",
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://www.daad.de/en/studying-in-germany/work-career/side-jobs/",
+      "label": "Germany: student work limit 140 full / 280 half days (DAAD)",
+      "country": "germany",
+      "authority": "student_portal",
+      "topics": [
+        "work_survival",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www.daad.de/en/studying-in-germany/work-career/career-planning/",
+      "label": "Germany: 18-month job-seeker permit after graduation (DAAD)",
+      "country": "germany",
+      "authority": "student_portal",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://www.bamf.de/EN/Themen/MigrationAufenthalt/ZuwandererDrittstaaten/Bildung/Studium/studium-node.html",
+      "label": "Germany: residence permit for study (BAMF)",
+      "country": "germany",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.bamf.de/EN/Themen/MigrationAufenthalt/ZuwandererDrittstaaten/Arbeit/Hochschulabsolvent/hochschulabsolvent-node.html",
+      "label": "Germany: graduates, job search, Blue Card (BAMF)",
+      "country": "germany",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/health-insurance/",
+      "label": "Germany: student health insurance (DAAD)",
+      "country": "germany",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://anabin.kmk.org/",
+      "label": "Germany: anabin database (KMK/ZAB)",
+      "country": "germany",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check",
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://www.uni-assist.de/en/how-to-apply/",
+      "label": "Germany: uni-assist application steps",
+      "country": "germany",
+      "authority": "credential_body",
+      "topics": [
+        "application_process",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.uni-assist.de/en/how-to-apply/plan-your-application/vpd",
+      "label": "Germany: uni-assist VPD (preliminary review documentation)",
+      "country": "germany",
+      "authority": "credential_body",
+      "topics": [
+        "application_process",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.uni-assist.de/en/how-to-apply/pay-all-fees/handling-fees/",
+      "label": "Germany: uni-assist handling fees",
+      "country": "germany",
+      "authority": "credential_body",
+      "topics": [
+        "application_process",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://aps-india.de/",
+      "label": "Germany: APS India academic evaluation certificate",
+      "country": "germany",
+      "authority": "credential_body",
+      "topics": [
+        "document_preparation",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://vietnam.diplo.de/vn-de/willkommen/aktuelles/aps/1236800",
+      "label": "Germany: APS Vietnam (German Embassy Hanoi)",
+      "country": "germany",
+      "authority": "credential_body",
+      "topics": [
+        "document_preparation",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.hochschulkompass.de/en/study-in-germany.html",
+      "label": "Germany: Hochschulkompass programme and university search",
+      "country": "germany",
+      "authority": "student_portal",
+      "topics": [
+        "university_selection",
+        "program_selection"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/a-third-level-course-or-a-language-course/",
+      "label": "Ireland: study visa conditions for third-level or language courses",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "eligibility_check",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-visa-options/how-to-apply-for-long-term-study-visa/",
+      "label": "Ireland: how to apply for a long-term D study visa",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/reminder-on-student-finance-requirements-from-30-june-2025/",
+      "label": "Ireland: student finance requirement from 30 June 2025",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "financial_viability",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/coming-to-study-in-ireland/what-are-my-study-options/interim-list-of-eligible-programmes-ilep/",
+      "label": "Ireland: Interim List of Eligible Programmes (ILEP)",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "program_selection",
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/my-situation-has-changed-since-i-arrived-in-ireland/student-permission/",
+      "label": "Ireland: Stamp 2 student permission and work hours",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "work_survival",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/my-situation-has-changed-since-i-arrived-in-ireland/third-level-graduate-programme/",
+      "label": "Ireland: Third Level Graduate Programme (Stamp 1G)",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/registering-your-immigration-permission/information-on-registering/immigration-permission-stamps/",
+      "label": "Ireland: immigration permission stamps explained",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "compliance_ethics",
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/registering-your-immigration-permission/frequently-asked-questions-for-registration/",
+      "label": "Ireland: first registration and IRP fee",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "onshore_support",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.irishimmigration.ie/preclearance-and-entry-visas-fees/",
+      "label": "Ireland: entry visa fees",
+      "country": "ireland",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.qqi.ie/news/qqi-announces-first-28-higher-education-institutions-authorised-to-use-trusted-ireland-quality",
+      "label": "Ireland: TrustEd Ireland mark, first authorised institutions (QQI)",
+      "country": "ireland",
+      "authority": "education_regulator",
+      "topics": [
+        "policy_change",
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://www.qqi.ie/recognition-of-foreign-qualifications",
+      "label": "Ireland: NARIC Ireland foreign qualification recognition (QQI)",
+      "country": "ireland",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.educationinireland.com/en/plan-your-study-abroad/student-visas",
+      "label": "Ireland: student visas (Education in Ireland)",
+      "country": "ireland",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://ind.nl/en/residence-permits/study/student-residence-permit-for-university-or-higher-professional-education",
+      "label": "Netherlands: student residence permit for university/HBO (IND)",
+      "country": "netherlands",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://ind.nl/en/required-amounts-income-requirements",
+      "label": "Netherlands: required amounts for students (IND)",
+      "country": "netherlands",
+      "authority": "immigration",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://ind.nl/en/fees-costs-of-an-application",
+      "label": "Netherlands: IND application fees",
+      "country": "netherlands",
+      "authority": "immigration",
+      "topics": [
+        "financial_viability",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://ind.nl/en/residence-permits/work/employing-a-foreign-national",
+      "label": "Netherlands: work rules for foreign students and TWV (IND)",
+      "country": "netherlands",
+      "authority": "immigration",
+      "topics": [
+        "work_survival",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://ind.nl/en/residence-permits/work/residence-permit-for-orientation-year",
+      "label": "Netherlands: orientation year (zoekjaar) for graduates (IND)",
+      "country": "netherlands",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://ind.nl/en/public-register-recognised-sponsors/public-register-study",
+      "label": "Netherlands: public register of recognised sponsors for study (IND)",
+      "country": "netherlands",
+      "authority": "immigration",
+      "topics": [
+        "university_selection",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www.nuffic.nl/en/study-and-work-in-the-netherlands/applying-for-a-credential-evaluation",
+      "label": "Netherlands: credential evaluation of a foreign diploma (Nuffic)",
+      "country": "netherlands",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.nuffic.nl/en/education-systems/india/level-of-diplomas",
+      "label": "Netherlands: Indian diploma levels compared (Nuffic)",
+      "country": "netherlands",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check",
+        "program_selection"
+      ]
+    },
+    {
+      "url": "https://www.nuffic.nl/en/education-systems/nepal/level-of-diplomas",
+      "label": "Netherlands: Nepali diploma levels compared (Nuffic)",
+      "country": "netherlands",
+      "authority": "credential_body",
+      "topics": [
+        "eligibility_check",
+        "program_selection"
+      ]
+    },
+    {
+      "url": "https://www.studyinnl.org/plan-your-stay/do-you-need-a-visa",
+      "label": "Netherlands: MVV and residence permit for students (Study in NL)",
+      "country": "netherlands",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.studyinnl.org/plan-your-stay/admission-requirements",
+      "label": "Netherlands: admission requirements and English tests (Study in NL)",
+      "country": "netherlands",
+      "authority": "student_portal",
+      "topics": [
+        "eligibility_check",
+        "test_preparation"
+      ]
+    },
+    {
+      "url": "https://www.studyinnl.org/after-your-studies/working-after-your-studies",
+      "label": "Netherlands: working after your studies (Study in NL)",
+      "country": "netherlands",
+      "authority": "student_portal",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://www.studyinnl.org/finances/financing-your-studies",
+      "label": "Netherlands: financing your studies (Study in NL)",
+      "country": "netherlands",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability",
+        "scholarship_funding"
+      ]
+    },
+    {
+      "url": "https://visa.educationmalaysia.gov.my/guidelines/required-documents",
+      "label": "EMGS: required documents for a student pass",
+      "country": "malaysia",
+      "authority": "student_portal",
+      "topics": [
+        "document_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://visa.educationmalaysia.gov.my/guidelines/medical-screening",
+      "label": "EMGS: post-arrival medical screening",
+      "country": "malaysia",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process",
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://visa.educationmalaysia.gov.my/guidelines/insurance-new-2026",
+      "label": "EMGS: compulsory student medical insurance (2026)",
+      "country": "malaysia",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability",
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://visa.educationmalaysia.gov.my/graduate-pass",
+      "label": "EMGS: Graduate Pass after graduation",
+      "country": "malaysia",
+      "authority": "student_portal",
+      "topics": [
+        "migration_pathway",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://educationmalaysia.gov.my/get-in-touch/faq",
+      "label": "EMGS: student pass FAQ (eVAL, renewal, part-time work, dependants)",
+      "country": "malaysia",
+      "authority": "student_portal",
+      "topics": [
+        "visa_process",
+        "work_survival",
+        "onshore_support"
+      ]
+    },
+    {
+      "url": "https://www.imi.gov.my/index.php/en/main-services/pass/student-pass/",
+      "label": "Immigration Malaysia: Student Pass rules and part-time work",
+      "country": "malaysia",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "work_survival",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www2.mqa.gov.my/mqr/english/ecarianakr.cfm",
+      "label": "MQA: Malaysian Qualifications Register search",
+      "country": "malaysia",
+      "authority": "education_regulator",
+      "topics": [
+        "university_selection",
+        "program_selection"
+      ]
+    },
+    {
+      "url": "https://biasiswa.mohe.gov.my/INTER/index.php",
+      "label": "MOHE: Malaysia International Scholarship (MIS)",
+      "country": "malaysia",
+      "authority": "education_ministry",
+      "topics": [
+        "scholarship_funding"
+      ]
+    },
+    {
+      "url": "https://educationmalaysia.gov.my/plan-your-studies/discover-malaysia/5-easy-steps-to-study-in-malaysia",
+      "label": "EMGS: 5 steps to study in Malaysia",
+      "country": "malaysia",
+      "authority": "student_portal",
+      "topics": [
+        "application_process",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://icp.gov.ae/en/services-details/?serviceid=64afe3c1035448005bd52e64",
+      "label": "ICP: residence permit for a student",
+      "country": "uae",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/residence-visa-for-studying-in-the-uae",
+      "label": "u.ae: residence visa for studying in the UAE",
+      "country": "uae",
+      "authority": "government",
+      "topics": [
+        "visa_process",
+        "eligibility_check",
+        "family_planning"
+      ]
+    },
+    {
+      "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/golden-visa",
+      "label": "u.ae: Golden visa incl. outstanding students",
+      "country": "uae",
+      "authority": "government",
+      "topics": [
+        "migration_pathway",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.gdrfad.gov.ae/en/services/f52024e0-b812-11ed-5210-4cd98f768936",
+      "label": "GDRFA Dubai: residence permit for a student",
+      "country": "uae",
+      "authority": "immigration",
+      "topics": [
+        "visa_process",
+        "document_preparation",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.gdrfad.gov.ae/en/services/8ea80dad-f43e-11eb-0320-0050569629e8",
+      "label": "GDRFA Dubai: Golden residence for outstanding students",
+      "country": "uae",
+      "authority": "immigration",
+      "topics": [
+        "migration_pathway",
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://www.caa.ae/Pages/Institutes/All.aspx",
+      "label": "CAA: licensed UAE higher education institutions",
+      "country": "uae",
+      "authority": "education_regulator",
+      "topics": [
+        "university_selection",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www.mohesr.gov.ae/en/eservices/servicecard/pages/universiycertificateequilization.aspx",
+      "label": "MoHESR: recognition of foreign university certificates",
+      "country": "uae",
+      "authority": "education_ministry",
+      "topics": [
+        "document_preparation",
+        "career_roi"
+      ]
+    },
+    {
+      "url": "https://u.ae/en/information-and-services/education/higher-education/student-admission-and-qualification-recognition",
+      "label": "u.ae: student admission and qualification recognition",
+      "country": "uae",
+      "authority": "government",
+      "topics": [
+        "document_preparation",
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://www.mohesr.gov.ae/En/MediaCenter/News/Pages/MoHESR-updates-recognition-procedures-for-foreign-higher-education-qualifications-in-line-with-Zero-Government-Bureaucracy-.aspx",
+      "label": "MoHESR: updated foreign-degree recognition procedure",
+      "country": "uae",
+      "authority": "education_ministry",
+      "topics": [
+        "policy_change",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.thaievisa.go.th/static/English-Manual.pdf",
+      "label": "Thailand e-Visa: official application manual",
+      "country": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "visa_process",
+        "application_process"
+      ]
+    },
+    {
+      "url": "https://kathmandu.thaiembassy.org/en/page/non-immigrant-visa-type-ed",
+      "label": "Thailand: Non-Immigrant ED visa (Royal Thai Embassy Kathmandu)",
+      "country": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "visa_process",
+        "document_preparation",
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://budapest.thaiembassy.org/en/publicservice/non-immigrant-ed-and-ed-plus-visa",
+      "label": "Thailand: ED and ED Plus visa for degree students",
+      "country": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "visa_process",
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://newdelhi.thaiembassy.org/en/page/visa",
+      "label": "Thailand: visa and e-Visa rules (Royal Thai Embassy New Delhi)",
+      "country": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "visa_process",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://thaiconsulatela.thaiembassy.org/en/publicservice/foreigners-staying-in-thailand-more-than-90-days",
+      "label": "Thailand: 90-day reporting (TM.47)",
+      "country": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "onshore_support",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://ielts.org/take-a-test/why-choose-ielts/who-accepts-ielts",
+      "label": "IELTS: who accepts IELTS",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://ielts.org/take-a-test/test-types/ielts-tests-for-uk-visas-and-immigration",
+      "label": "IELTS for UKVI: tests accepted for UK visas",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://ielts.org/organisations/ielts-for-organisations/verifying-ielts-results",
+      "label": "IELTS: results verification and validity",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://ielts.org/take-a-test/booking-your-test/one-skill-retake",
+      "label": "IELTS One Skill Retake",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation"
+      ]
+    },
+    {
+      "url": "https://www.pearsonpte.com/pte-academic/",
+      "label": "PTE Academic: overview and score validity",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation"
+      ]
+    },
+    {
+      "url": "https://www.pearsonpte.com/destination-australia/visas/",
+      "label": "PTE Academic: accepted for Australian visas",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.pearsonpte.com/destination-uk/visas/",
+      "label": "PTE: UK visa categories and required scores",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.pearsonpte.com/pte-academic-ukvi/",
+      "label": "PTE Academic UKVI (SELT)",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.pearsonpte.com/destination-new-zealand/",
+      "label": "PTE Academic: accepted for New Zealand",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.pearsonpte.com/pte-core/",
+      "label": "PTE Core: Canadian PR and PGWP",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "migration_pathway"
+      ]
+    },
+    {
+      "url": "https://www.ets.org/toefl/test-takers/ibt/scores/get-scores.html",
+      "label": "TOEFL iBT: getting scores and validity",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation"
+      ]
+    },
+    {
+      "url": "https://www.ets.org/toefl/test-takers/ibt/where-to-study/study-in-australia.html",
+      "label": "TOEFL iBT: acceptance for Australian visas",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://www.ets.org/newsroom/toefl-essentials-canada.html",
+      "label": "TOEFL Essentials: IRCC designation status",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://englishtest-static.duolingo.com/media/resources/Top%20Accepting%20Programs.pdf",
+      "label": "Duolingo English Test: accepting programs and visa acceptance",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "visa_process"
+      ]
+    },
+    {
+      "url": "https://englishtest-static.duolingo.com/media/resources/test-taker-guide/DET%20Guide%20EN.pdf",
+      "label": "Duolingo English Test: official test-taker guide",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation"
+      ]
+    },
+    {
+      "url": "https://www.enic-naric.net/page-about-ENIC-NARIC-Networks",
+      "label": "ENIC-NARIC networks: national recognition centres",
+      "country": "global",
+      "authority": "credential_body",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.hcch.net/en/instruments/conventions/status-table/?cid=41",
+      "label": "HCCH: Apostille Convention status table",
+      "country": "global",
+      "authority": "government",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.pearsonpte.com/who-accepts-pte/",
+      "label": "PTE: who accepts PTE",
+      "country": "global",
+      "authority": "test_body",
+      "topics": [
+        "test_preparation",
+        "university_selection"
+      ]
+    },
+    {
+      "url": "https://www.nrb.org.np/departments/fxm/",
+      "label": "Nepal: NRB Foreign Exchange Management Department circulars",
+      "market": "nepal",
+      "authority": "central_bank",
+      "topics": [
+        "financial_viability",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://opcr.nepalpolice.gov.np/",
+      "label": "Nepal: online police clearance report (Nepal Police)",
+      "market": "nepal",
+      "authority": "police",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://att.nepalconsular.gov.np/",
+      "label": "Nepal: online attestation of police character certificate",
+      "market": "nepal",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://nepalpassport.gov.np/process/-41",
+      "label": "Nepal: e-passport fees (Department of Passports)",
+      "market": "nepal",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.mea.gov.in/apostille-menu",
+      "label": "India: MEA apostille and attestation of documents",
+      "market": "india",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://esanad.nic.in/",
+      "label": "India: e-Sanad online document attestation and apostille",
+      "market": "india",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.rbi.org.in/scripts/FS_FAQs.aspx?Id=115",
+      "label": "India: RBI Liberalised Remittance Scheme FAQ (study abroad remittances)",
+      "market": "india",
+      "authority": "central_bank",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://pmvidyalaxmi.co.in/",
+      "label": "India: PM-Vidyalaxmi education loan portal",
+      "market": "india",
+      "authority": "student_portal",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.mea.gov.in/students-registration-portal",
+      "label": "India: MEA MADAD registration for Indian students abroad",
+      "market": "india",
+      "authority": "foreign_ministry",
+      "topics": [
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://mofa-servicedirectory.apostille.mygov.bd/",
+      "label": "Bangladesh: MOFA e-Apostille of documents",
+      "market": "bangladesh",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.mygov.bd/services/info?id=BDGS-1722229346",
+      "label": "Bangladesh: certificate and transcript attestation for study abroad (myGov)",
+      "market": "bangladesh",
+      "authority": "education_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.bb.org.bd/aboutus/regulationguideline/foreignexchange/fegvol1.php",
+      "label": "Bangladesh: Bangladesh Bank Guidelines for Foreign Exchange Transactions (student file)",
+      "market": "bangladesh",
+      "authority": "central_bank",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.bb.org.bd/mediaroom/circulars/fepd/aug102026fepd-129e.pdf",
+      "label": "Bangladesh: FE circular on international cards for overseas education payments (Aug 2026)",
+      "market": "bangladesh",
+      "authority": "central_bank",
+      "topics": [
+        "financial_viability",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://naric.edu.vn/news/huong-dan-quy-trinh-cnvb-co-so-giao-duc.html",
+      "label": "Vietnam: foreign degree recognition procedure (VN-NARIC)",
+      "market": "vietnam",
+      "authority": "education_regulator",
+      "topics": [
+        "eligibility_check",
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://hopphaphoa.lanhsuvietnam.gov.vn/Legalization/Legalized-Guide.aspx",
+      "label": "Vietnam: online consular certification and legalisation guide",
+      "market": "vietnam",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://xaydungchinhsach.chinhphu.vn/huong-dan-thu-tuc-xin-cap-phieu-ly-lich-tu-phap-ban-giay-119260727154331933.htm",
+      "label": "Vietnam: judicial record certificate procedure (from 1 Jul 2026)",
+      "market": "vietnam",
+      "authority": "police",
+      "topics": [
+        "document_preparation",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/tthc?matt=29497",
+      "label": "Vietnam: ordinary passport issuance procedure",
+      "market": "vietnam",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://congbao.chinhphu.vn/van-ban/thong-tu-so-20-2022-tt-nhnn-38444.htm",
+      "label": "Vietnam: SBV Circular 20/2022 on transfers abroad (incl. study)",
+      "market": "vietnam",
+      "authority": "central_bank",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://caraga.ched.gov.ph/how-to-apply-for-cav/",
+      "label": "Philippines: CHED CAV of academic records",
+      "market": "philippines",
+      "authority": "education_regulator",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://cfo.gov.ph/cfo-registration-services",
+      "label": "Philippines: CFO registration and PDOS services",
+      "market": "philippines",
+      "authority": "government",
+      "topics": [
+        "document_preparation",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://www.immigration.gov.ph/wp-content/uploads/2023/11/18_2015Jun15_IACAT_RevisedGuidelines.pdf",
+      "label": "Philippines: BI/IACAT departure formalities guidelines",
+      "market": "philippines",
+      "authority": "immigration",
+      "topics": [
+        "visa_risk_analysis",
+        "compliance_ethics"
+      ]
+    },
+    {
+      "url": "https://accreditation.ocsc.go.th/",
+      "label": "Thailand: OCSC recognised foreign institutions (e-Accreditation)",
+      "market": "thailand",
+      "authority": "government",
+      "topics": [
+        "eligibility_check"
+      ]
+    },
+    {
+      "url": "https://consular.mfa.go.th/th/page/legalization",
+      "label": "Thailand: document legalisation (Department of Consular Affairs)",
+      "market": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://qlegal.consular.go.th/",
+      "label": "Thailand: online booking for document legalisation",
+      "market": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.mfa.go.th/en/content/legalizationofficepathumwan-2",
+      "label": "Thailand: legalisation office and apostille accession plans",
+      "market": "thailand",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation",
+        "policy_change"
+      ]
+    },
+    {
+      "url": "https://mfa.go.th/en/page/electronic-passport",
+      "label": "Thailand: e-Passport requirements and fees",
+      "market": "thailand",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://pcscenter.sbpolice.go.th/about.html",
+      "label": "Thailand: police clearance service center (Special Branch)",
+      "market": "thailand",
+      "authority": "police",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.bot.or.th/en/our-roles/financial-markets/foreign-exchange-regulations/exchange-control-regulation.html",
+      "label": "Thailand: Bank of Thailand exchange control (education payments abroad)",
+      "market": "thailand",
+      "authority": "central_bank",
+      "topics": [
+        "financial_viability"
+      ]
+    },
+    {
+      "url": "https://www.mfa.gov.lk/online-consular-services/",
+      "label": "Sri Lanka: MFA online consular services and attestation",
+      "market": "sri_lanka",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.mfa.gov.lk/degree-certificates-awarded-by-local-universities",
+      "label": "Sri Lanka: attestation of local university degree certificates",
+      "market": "sri_lanka",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.mfa.gov.lk/certificates-issued-by-the-department-of-examinations",
+      "label": "Sri Lanka: authentication of GCE O/L and A/L certificates",
+      "market": "sri_lanka",
+      "authority": "foreign_ministry",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.immigration.gov.lk/pages_e.php?id=8",
+      "label": "Sri Lanka: passport issuance and fees",
+      "market": "sri_lanka",
+      "authority": "immigration",
+      "topics": [
+        "document_preparation"
+      ]
+    },
+    {
+      "url": "https://www.cbsl.gov.lk/en/news/remittance-of-funds-to-sri-lankans-abroad-to-pursue-studies-and-on-short-term-visits-to-meet-their-expenses",
+      "label": "Sri Lanka: CBSL on remitting funds to students abroad",
+      "market": "sri_lanka",
+      "authority": "central_bank",
+      "topics": [
+        "financial_viability"
+      ]
+    }
+  ],
+  "blocked": [
+    {
+      "url": "https://www.teqsa.gov.au/national-register",
+      "label": "TEQSA National Register of higher education providers",
+      "status": 0
+    },
+    {
+      "url": "https://www.education.gov.au/esos-framework",
+      "label": "ESOS framework (education.gov.au)",
+      "status": 0
+    },
+    {
+      "url": "https://www.education.gov.au/international-education/national-planning-level",
+      "label": "International student National Planning Level",
+      "status": 0
+    },
+    {
+      "url": "https://www.fairwork.gov.au/find-help-for/visa-holders-and-migrants",
+      "label": "Fair Work: visa holders and migrant workers",
+      "status": 0
+    },
+    {
+      "url": "https://www.ombudsman.gov.au/complaints/international-student-complaints",
+      "label": "Overseas Students Ombudsman: international student complaints",
+      "status": 403
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/eligibility.html",
+      "label": "Study permit: who can apply",
+      "status": 0
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents.html",
+      "label": "Study permit: get your documents",
+      "status": 0
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/get-documents/provincial-attestation-letter.html",
+      "label": "Study permit: provincial/territorial attestation letter (PAL/TAL)",
+      "status": 0
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/campaigns/biometrics.html",
+      "label": "Biometrics (IRCC)",
+      "status": 0
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html",
+      "label": "Designated learning institutions (DLI) list",
+      "status": 0
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation.html",
+      "label": "Post-graduation work permit (PGWP)",
+      "status": 0
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed.html",
+      "label": "Express Entry: educational credential assessment (designated organisations)",
+      "status": 0
+    },
+    {
+      "url": "https://studyinthestates.dhs.gov/students/prepare/paying-the-i-901-sevis-fee",
+      "label": "Study in the States: paying the I-901 SEVIS fee",
+      "status": 403
+    },
+    {
+      "url": "https://studyinthestates.dhs.gov/students/work/working-in-the-united-states",
+      "label": "Study in the States: working in the US (F-1)",
+      "status": 403
+    },
+    {
+      "url": "https://studyinthestates.dhs.gov/stem-opt-hub",
+      "label": "Study in the States: STEM OPT hub",
+      "status": 403
+    },
+    {
+      "url": "https://studyinthestates.dhs.gov/school-search",
+      "label": "Study in the States: SEVP-certified school search",
+      "status": 403
+    },
+    {
+      "url": "https://www.ice.gov/sevis",
+      "label": "ICE: SEVIS overview",
+      "status": 403
+    },
+    {
+      "url": "https://www.ice.gov/sevis/i901/faq",
+      "label": "ICE: I-901 SEVIS fee FAQ",
+      "status": 403
+    },
+    {
+      "url": "https://www.ice.gov/sevis/practical-training",
+      "label": "ICE: practical training (OPT/STEM OPT)",
+      "status": 403
+    },
+    {
+      "url": "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html",
+      "label": "US Department of State: student visa (F/M)",
+      "status": 403
+    },
+    {
+      "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+      "label": "US visa fees (MRV)",
+      "status": 403
+    },
+    {
+      "url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/administrative-processing-information.html",
+      "label": "US visa administrative processing (221(g))",
+      "status": 403
+    },
+    {
+      "url": "https://www.uscis.gov/working-in-the-united-states/students-and-exchange-visitors/optional-practical-training-extension-for-stem-students-stem-opt",
+      "label": "USCIS: STEM OPT extension",
+      "status": 403
+    },
+    {
+      "url": "https://www.uscis.gov/i-765",
+      "label": "USCIS: Form I-765 (EAD for OPT)",
+      "status": 403
+    },
+    {
+      "url": "https://www.studywithnewzealand.govt.nz/en/study-options/study-costs",
+      "label": "Study with New Zealand: study costs",
+      "status": 429
+    },
+    {
+      "url": "https://www.naumainz.studywithnewzealand.govt.nz/studying-in-nz/before-your-arrival/cost-of-living",
+      "label": "NauMai NZ: cost of living",
+      "status": 429
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/work-on-campus.html",
+      "label": "Work on campus as an international student",
+      "status": 0
+    },
+    {
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html",
+      "label": "IRCC processing times",
+      "status": 0
+    },
+    {
+      "url": "https://www.make-it-in-germany.com/en/visa-residence/types/studying",
+      "label": "Germany: visa for studying (Make it in Germany)",
+      "status": 200
+    },
+    {
+      "url": "https://www.citizensinformation.ie/en/moving-country/moving-to-ireland/studying-in-ireland/immigration-nonEEA-students/",
+      "label": "Ireland: immigration rules for non-EEA students (Citizens Information)",
+      "status": 403
+    },
+    {
+      "url": "https://web.khda.gov.ae/en/Guides/Students/FAQs-on-universities-in-Dubai",
+      "label": "KHDA: FAQs on universities in Dubai",
+      "status": 0
+    },
+    {
+      "url": "https://noc.moest.gov.np/",
+      "label": "Nepal: No Objection Certificate (NOC) online application (MoEST)",
+      "status": 200
+    },
+    {
+      "url": "https://moest.gov.np/content/13678/notice-regarding-submission-of-application-for-study/",
+      "label": "Nepal: MoEST notice on NOC applications for foreign study",
+      "status": 0
+    },
+    {
+      "url": "https://nepalconsular.gov.np/pages/consular-authentication-9",
+      "label": "Nepal: document attestation (Department of Consular Services)",
+      "status": 0
+    },
+    {
+      "url": "https://www.passportindia.gov.in/psp/ApplyPCC",
+      "label": "India: apply for Police Clearance Certificate (Passport Seva)",
+      "status": 200
+    },
+    {
+      "url": "https://pcc.police.gov.bd/ords/f?p=500:1",
+      "label": "Bangladesh: online police clearance certificate",
+      "status": 0
+    },
+    {
+      "url": "https://www.epassport.gov.bd/",
+      "label": "Bangladesh: e-Passport application",
+      "status": 403
+    },
+    {
+      "url": "https://lanhsuvietnam.gov.vn/Lists/BaiViet/DispForm.aspx?ID=755",
+      "label": "Vietnam: countries and documents exempt from legalisation",
+      "status": 0
+    },
+    {
+      "url": "https://consular.dfa.gov.ph/services/authentication/authentication-requirements/requirements-of-documents-for-authentication",
+      "label": "Philippines: DFA apostille document requirements",
+      "status": 403
+    },
+    {
+      "url": "https://www.deped.gov.ph/2017/08/25/do-48-s-2017-policy-and-procedural-guidelines-on-the-certification-authentication-and-verification-of-basic-education-school-records/",
+      "label": "Philippines: DepEd CAV of basic education records",
+      "status": 403
+    },
+    {
+      "url": "https://clearance.nbi.gov.ph/",
+      "label": "Philippines: NBI clearance online application",
+      "status": 200
+    },
+    {
+      "url": "https://consular.dfa.gov.ph/adult-new/",
+      "label": "Philippines: DFA passport requirements (new adult)",
+      "status": 403
+    },
+    {
+      "url": "https://psa.gov.ph/civilregistration/requesting-civil-registry-document",
+      "label": "Philippines: PSA civil registry documents",
+      "status": 403
+    },
+    {
+      "url": "https://certificate.doenets.lk/",
+      "label": "Sri Lanka: Department of Examinations certificate requests",
+      "status": 200
+    },
+    {
+      "url": "https://eservices.police.lk/ClearanceCertificate/home.action",
+      "label": "Sri Lanka: police clearance certificate application",
+      "status": 0
+    }
+  ]
+}

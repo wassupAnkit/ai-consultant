@@ -1,0 +1,181 @@
+# Chart defaults. Safe to render anywhere: ingress and external secrets are off
+# until an environment overlay (values-prod.yaml) turns them on.
+app: expert-ai-consultant
+namespace: production
+environment: prod
+replicaCount: 1
+port: 3000
+
+repository:
+  image: <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com
+  name: expert-ai-consultant-prod
+  tag: REPLACED_BY_CI
+  pullPolicy: IfNotPresent
+
+service:
+  name: expert-ai-consultant-service
+  port: 3000
+  type: ClusterIP
+
+dnsName: ai-consultant.heubertapp.com
+
+ingress:
+  enabled: false
+  className: alb
+  annotations: {}
+
+# Non-secret environment, rendered verbatim into the ConfigMap (plus PORT and
+# APP_RELEASE, which the template derives). Credentials (API_KEY,
+# GOOGLE_API_KEY, MONGODB_URI, LANGFUSE_*_KEY) never live in values — they
+# arrive via externalSecret below.
+config:
+  NODE_ENV: production
+  LOG_LEVEL: info
+  LANGFUSE_BASE_URL: https://cloud.langfuse.com
+  LANGFUSE_PROMPT_LABEL: production
+  LANGFUSE_TRACING_ENVIRONMENT: prod
+  # MongoDB Atlas: database name (MONGODB_URI is a secret). Pin Atlas Search:
+  # the in-app fallback loads every chunk embedding into RAM (~6 KB each), which
+  # does not fit the 512Mi limit once partner-university sites are indexed.
+  MONGODB_DB: expert_ai_consultant
+  KB_SEARCH_MODE: atlas
+  RETRIEVAL_TOP_K: "6"
+  # Per-provenance quotas so ~150 partner sites cannot swamp experteducation.com; official = government pages (src/ingest/official.ts).
+  RETRIEVAL_QUOTAS: "site:4,partner:5,program:3,upload:4,official:3"
+  SESSION_TTL_HOURS: "72"
+  # Intent classifier. "gemini" = structured-output Gemini (default). "jev" = TypeSafe Jev via
+  # OpenRouter decides everything in one ~400 ms call (Gemini only as an error fallback);
+  # consultant messages are PII-redacted before they leave the cluster. Needs OPENROUTER_API_KEY
+  # in the Secret, else the pod logs an error at boot and stays on gemini.
+  CLASSIFIER_PROVIDER: "gemini"
+  # Durable activity log for fine-tuning data (chat_turns + activity_events).
+  # 0 retention days = keep forever. ACTIVITY_HASH_SECRET (optional) is a Secret.
+  ACTIVITY_LOG_ENABLED: "true"
+  ACTIVITY_RETENTION_DAYS: "0"
+  # Browser auth: "Continue with Google" (any verified Google account, no domain
+  # restriction); x-api-key remains for server-to-server callers.
+  REQUIRE_GOOGLE_PROVIDER: "true"
+  # Frontend origin(s) allowed by CORS (expert-chatbot-frontend).
+  CORS_ORIGINS: https://edge.heubertapp.com
+  # Read-only CRM access over MCP (crm-api). Disabled unless CRM_MCP_URL is set; URL,
+  # CRM_EXCHANGE_SECRET and CRM_TENANT_ORIGIN must all be present or the pod fails to boot.
+  # CRM_TENANT_ORIGIN is the CRM *front end* host (the tenant's company_domain), not the API
+  # host, because crm-api resolves the tenant from that Origin header.
+  #
+  # CRM_EXCHANGE_SECRET is a credential: it belongs in the Secret (AWS Secrets Manager),
+  # never here, and must differ from SESSION_SECRET.
+  #
+  # Each turn exchanges a short-lived assertion for the asking consultant's OWN CRM token,
+  # so crm-api's per-user branch and assignee scoping applies. Enabling this still needs the
+  # matching MCP_EDGE_EXCHANGE_SECRET on crm-api.
+  # CRM_MCP_URL: https://pr-680-crm-api.heubertapp.com/v1/mcp
+  # CRM_TENANT_ORIGIN: https://pr-680-crm.heubertapp.com
+  # CRM_TIMEOUT_MS: "15000"
+  # Gmail + Drive over Google's remote MCP servers, per consultant (they connect from the account
+  # menu). GOOGLE_WORKSPACE_CLIENT_ID + GOOGLE_WORKSPACE_REDIRECT_URI go here; the client secret
+  # and GOOGLE_TOKEN_ENC_KEY are credentials and belong in the Secret. All four must be present
+  # or the pod (and the ingest CronJobs, which share this ConfigMap) fail to boot, so uncomment
+  # these only after the Secret carries both credentials.
+  # GOOGLE_WORKSPACE_CLIENT_ID: <id>.apps.googleusercontent.com
+  # GOOGLE_WORKSPACE_REDIRECT_URI: https://edge.heubertapp.com/api/integrations/google/callback
+  # Only these domains may link Gmail/Drive/Calendar. Independent of sign-in (no restriction).
+  # GOOGLE_WORKSPACE_ALLOWED_DOMAINS: heubert.com,experteducation.com.au
+  # GOOGLE_WORKSPACE_TIMEOUT_MS: "15000"
+  # GMAIL_DRAFTS_ENABLED: "true"
+
+# Pull credentials from a Secret populated from AWS Secrets Manager by the
+# secrets-store CSI driver (SecretProviderClass of the same name).
+externalSecret:
+  enabled: false
+  name: ""
+
+# Edge's own ServiceAccount with an IRSA role (roleArn). Off: pods run as the
+# namespace's default SA.
+serviceAccount:
+  create: false
+  name: ""
+  roleArn: ""
+
+probes:
+  # /health and /healthz are unauthenticated liveness endpoints; /readyz also
+  # checks MongoDB / Gemini / Langfuse reachability.
+  startup:
+    enabled: true
+    path: /healthz
+    periodSeconds: 5
+    timeoutSeconds: 3
+    # Index creation / DB connect runs before the server listens; allow ~2 min.
+    failureThreshold: 24
+  liveness:
+    enabled: true
+    path: /healthz
+    initialDelaySeconds: 0
+    periodSeconds: 20
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readiness:
+    enabled: true
+    path: /readyz
+    initialDelaySeconds: 0
+    periodSeconds: 10
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+# uid of the unprivileged user baked into the image (oven/bun "bun" = 1000).
+securityContext:
+  runAsUser: 1000
+
+# Empty = unset. Set per environment (see values-prod.yaml).
+resources: {}
+
+# Graceful shutdown. On SIGTERM the server refuses new work (503, /readyz fails),
+# lets in-flight answers finish for SHUTDOWN_DRAIN_MS (default REQUEST_TIMEOUT_MS
+# + 5 s = 125 s), then flushes activity/traces/MongoDB (up to 15 s) and exits.
+# The grace period must cover all of it or the kubelet SIGKILLs live answers:
+#   terminationGracePeriodSeconds >= preStop sleep + SHUTDOWN_DRAIN_MS + 15 s
+# Here (no preStop): 0 + 125 + 15 = 140. Prod with a 15 s preStop sleep: 15 + 125 + 15 = 155 -> 160.
+terminationGracePeriodSeconds: 140
+# Main container lifecycle hooks, e.g. a preStop sleep that keeps serving while
+# the ALB deregisters the target: {preStop: {sleep: {seconds: 15}}}.
+lifecycle: {}
+
+pdb:
+  enabled: false
+  minAvailable: 1
+
+# Knowledge-base ingestion CronJobs (scripts/ingest.ts in the same image). Off
+# by default; values-prod.yaml enables them. Crawling never runs in API pods.
+ingest:
+  enabled: false
+  timeZone: Australia/Sydney
+  concurrencyPolicy: Forbid
+  backoffLimit: 1
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 3
+  startingDeadlineSeconds: 600
+  # Requests stay small so the job schedules on the general node pool next to the
+  # API pods (crawling is I/O-bound); the limits let embedding batches burst.
+  resources:
+    requests:
+      cpu: 100m
+      memory: 384Mi
+    limits:
+      cpu: "1"
+      memory: 1Gi
+  jobs:
+    # Nightly incremental: Expert's curated guides (data/markets|compliance|facts|counsellor,
+    # unchanged chunks skipped), then the sites; sitemap lastmod skips unchanged pages.
+    - name: nightly
+      schedule: "0 1 * * *"
+      activeDeadlineSeconds: 19800
+      args: ["--source", "all", "--deadline-minutes", "300"]
+    # Weekly full pass that also deletes pages no longer on the sites.
+    - name: weekly-sweep
+      schedule: "0 23 * * 6"
+      activeDeadlineSeconds: 27000
+      args: ["--source", "all", "--sweep", "--deadline-minutes", "420"]
+    # Drains POST /v1/knowledge/reindex requests every 30 minutes.
+    - name: requests
+      schedule: "*/30 * * * *"
+      activeDeadlineSeconds: 1700
+      args: ["--from-requests", "--deadline-minutes", "25"]

@@ -1,0 +1,23 @@
+node_modules
+.git
+.gitignore
+.idea
+.vscode
+.DS_Store
+
+# secrets / local env — never bake into the image
+.env
+.env.*
+!.env.example
+
+# not needed at runtime
+langflow
+README.md
+CLAUDE.md
+server.log
+*.log
+index.ts
+helm
+buildspec-prod.yaml
+Dockerfile
+.dockerignore

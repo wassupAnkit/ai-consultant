@@ -1,0 +1,49 @@
+# Local development stack. Production runs on EKS via helm/ (MongoDB Atlas, not this container).
+#
+#   docker compose up -d mongodb          # Atlas Local: MongoDB + Atlas Search + Vector Search
+#   bun run db:setup && bun run ingest    # create indexes, crawl experteducation.com
+#   bun run dev                           # API on http://localhost:3000
+#
+# Ports avoid the defaults so this stack coexists with other projects on the host.
+services:
+  mongodb:
+    image: mongodb/mongodb-atlas-local:latest
+    container_name: expert-ai-mongodb
+    ports:
+      - "57017:27017"
+    environment:
+      MONGODB_INITDB_ROOT_USERNAME: edge
+      MONGODB_INITDB_ROOT_PASSWORD: edge-dev-password
+    volumes:
+      - mongo-data:/data/db
+      - mongo-config:/data/configdb
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.runCommand({ ping: 1 }).ok", "-u", "edge", "-p", "edge-dev-password", "--authenticationDatabase", "admin"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  app:
+    build: .
+    container_name: expert-ai-consultant
+    profiles: ["app"]
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      NODE_ENV: development
+      PORT: "3000"
+      MONGODB_URI: mongodb://edge:edge-dev-password@mongodb:27017/?directConnection=true&authSource=admin
+      MONGODB_DB: expert_ai_consultant
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      API_KEY: ${API_KEY:-}
+      LANGFUSE_PUBLIC_KEY: ${LANGFUSE_PUBLIC_KEY:-}
+      LANGFUSE_SECRET_KEY: ${LANGFUSE_SECRET_KEY:-}
+      LANGFUSE_BASE_URL: ${LANGFUSE_BASE_URL:-https://cloud.langfuse.com}
+      SUPABASE_URL: ${SUPABASE_URL:-}
+    ports:
+      - "3000:3000"
+
+volumes:
+  mongo-data:
+  mongo-config:

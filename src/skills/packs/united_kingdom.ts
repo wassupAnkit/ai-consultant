@@ -1,0 +1,41 @@
+import type { PackDefinition } from "../types";
+
+/** United Kingdom: UKVI guidance and the Immigration Rules on GOV.UK; the sponsor issues the CAS. */
+export const UNITED_KINGDOM: PackDefinition = {
+  country: "united_kingdom",
+  label: "United Kingdom",
+  version: "2026-10-08",
+  officialSources: [
+    { domain: "gov.uk", authority: "immigration", topics: "all" },
+    { domain: "ukcisa.org.uk", authority: "student_portal", topics: ["visa_process", "visa_risk_analysis", "document_preparation", "financial_viability", "work_survival", "onshore_support", "family_planning", "migration_pathway", "lifestyle_adaptation"] },
+    { domain: "study-uk.britishcouncil.org", authority: "student_portal", topics: ["program_selection", "university_selection", "scholarship_funding", "lifestyle_adaptation", "comparative_decision"] },
+    { domain: "ucas.com", authority: "student_portal", topics: ["application_process", "offer_enrolment", "program_selection", "university_selection", "alternative_pathways"] },
+    { domain: "officeforstudents.org.uk", authority: "education_regulator", topics: ["university_selection", "program_selection", "compliance_ethics"] },
+    { domain: "qaa.ac.uk", authority: "education_regulator", topics: ["university_selection", "program_selection"] },
+    { domain: "nhs.uk", authority: "government", topics: ["lifestyle_adaptation", "onshore_support"] },
+    { domain: "ielts.org", authority: "test_body", topics: ["test_preparation", "eligibility_check"] },
+    { domain: "pearsonpte.com", authority: "test_body", topics: ["test_preparation", "eligibility_check"] },
+  ],
+  vocabulary: {
+    visa_process: ["Student visa", "Confirmation of Acceptance for Studies", "CAS statement", "UKVI", "Immigration Health Surcharge", "maintenance funds", "eVisa", "credibility interview"],
+    visa_risk_analysis: ["credibility interview", "genuine student requirement", "refusal reasons", "Basic Compliance Assessment", "deception refusal", "administrative review", "immigration history", "Appendix Student"],
+    document_preparation: ["CAS statement", "funds held bank statement", "TB test certificate", "ATAS certificate", "academic transcripts", "certified translation", "parental consent letter", "official financial sponsor letter"],
+    application_process: ["UCAS", "direct application", "conditional offer", "unconditional offer", "tuition deposit", "pre-CAS interview"],
+    offer_enrolment: ["CAS issuance", "unconditional offer", "tuition deposit", "pre-CAS interview", "enrolment and registration", "deferral"],
+    financial_viability: ["maintenance requirement", "Immigration Health Surcharge", "tuition fee deposit", "funds held period", "official financial sponsor", "London and outside London"],
+    scholarship_funding: ["Chevening", "Commonwealth Scholarships", "GREAT Scholarships", "university international scholarship"],
+    migration_pathway: ["Graduate route", "Skilled Worker visa", "Register of licensed sponsors", "Global Talent visa", "switching visa inside the UK", "certificate of sponsorship"],
+    career_roi: ["Graduate Outcomes survey", "Discover Uni", "Skilled Worker eligible occupations", "Graduate route", "Register of licensed sponsors"],
+    work_survival: ["term-time work limit", "vacation work", "National Minimum Wage", "National Insurance number", "Student visa work conditions", "self-employment prohibited"],
+    lifestyle_adaptation: ["Immigration Health Surcharge", "NHS registration", "eVisa", "student accommodation", "council tax exemption", "UKCISA advice"],
+    onshore_support: ["change of course", "extension inside the UK", "academic engagement", "sponsor reporting duties", "eVisa update", "visa curtailment"],
+    family_planning: ["dependants restriction", "postgraduate research dependants", "Student dependant visa", "children's education", "Immigration Health Surcharge dependants"],
+    policy_change: ["Statement of Changes to the Immigration Rules", "Appendix Student", "immigration white paper", "Graduate route changes", "dependants restriction", "Basic Compliance Assessment"],
+    eligibility_check: ["UK ENIC", "academic entry requirements", "Secure English Language Test", "English language requirement", "ATAS"],
+    test_preparation: ["IELTS for UKVI", "Secure English Language Test", "PTE Academic UKVI", "LanguageCert", "university in-house English test", "Oxford Test of English"],
+    program_selection: ["Discover Uni", "UCAS course search", "foundation year", "integrated masters", "placement year", "RQF level"],
+    university_selection: ["Office for Students register", "licensed student sponsor", "Teaching Excellence Framework", "QAA", "Register of licensed sponsors"],
+    alternative_pathways: ["foundation year", "international year one", "pre-sessional English", "top-up degree", "pathway provider"],
+    compliance_ethics: ["OISC", "Immigration Advice Authority", "British Council Agent Quality Framework", "UK Agent Quality Framework", "sponsor compliance"],
+  },
+};

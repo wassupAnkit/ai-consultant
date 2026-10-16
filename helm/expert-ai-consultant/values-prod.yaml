@@ -1,0 +1,144 @@
+# ===========================================================================
+# PRODUCTION — ap-southeast-2 (Sydney), EKS hb-prod-apse2. Overlay on values.yaml.
+#
+# * NO CREDENTIALS IN THIS FILE. Secrets arrive from AWS Secrets Manager
+#   prod/expert-ai-consultant/app through the secrets-store CSI driver
+#   (SecretProviderClass expert-ai-consultant-secrets, defined in
+#   heubert-infra/environments/prod/app-secrets.tf).
+# * IMAGE TAG IS A GIT SHA, NEVER "latest". CodeBuild (buildspec-prod.yaml)
+#   commits the tag to this file on the gitops-prod branch; ArgoCD syncs it.
+# * Chat history lives in MongoDB Atlas (MONGODB_URI), so the service is
+#   stateless and runs 2 replicas for zero-downtime rollouts.
+# ===========================================================================
+
+namespace: production
+environment: prod
+replicaCount: 2
+
+repository:
+  image: <AWS_ACCOUNT_ID>.dkr.ecr.ap-southeast-2.amazonaws.com
+  name: expert-ai-consultant-prod
+  # Replaced per build by CI (git SHA). The placeholder is intentionally
+  # invalid so an un-templated deploy fails loudly.
+  tag: REPLACED_BY_CI
+  pullPolicy: IfNotPresent
+
+dnsName: ai-consultant.heubertapp.com
+
+ingress:
+  enabled: true
+  className: alb
+  annotations:
+    # Load-balancer-level annotations MUST be byte-identical on every ingress
+    # in the shared-alb group or the ALB controller rejects the group
+    # (heubert-infra/environments/prod/admin-access.tf). The pre-cutover office allowlist
+    # (inbound-cidrs) is deliberately gone: being load-balancer-level it governed every
+    # host on shared-alb, so this one ingress kept edge.heubertapp.com unreachable from
+    # outside the office long after the frontend dropped its own copy. It was the last of
+    # nine to carry it. Putting it back re-locks the whole prod estate, not just this app.
+    alb.ingress.kubernetes.io/group.name: shared-alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80,"HTTPS":443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: "443"
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-southeast-2:<AWS_ACCOUNT_ID>:certificate/<ACM_CERT_ID>
+    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:ap-southeast-2:<AWS_ACCOUNT_ID>:regional/webacl/heubert-alb-waf/<WAF_WEBACL_ID>
+    # Target-group level (per ingress). /health is unauthenticated by design.
+    alb.ingress.kubernetes.io/healthcheck-path: /health
+
+config:
+  NODE_ENV: production
+  LOG_LEVEL: info
+  LANGFUSE_BASE_URL: https://cloud.langfuse.com
+  LANGFUSE_PROMPT_LABEL: production
+  LANGFUSE_TRACING_ENVIRONMENT: prod
+  # MongoDB Atlas: database name (MONGODB_URI is a secret). Pin Atlas Search:
+  # the in-app fallback loads every chunk embedding into RAM (~6 KB each), which
+  # does not fit the 512Mi limit once partner-university sites are indexed.
+  MONGODB_DB: expert_ai_consultant
+  KB_SEARCH_MODE: atlas
+  RETRIEVAL_TOP_K: "6"
+  # Per-provenance quotas so ~150 partner sites cannot swamp experteducation.com; official = government pages (src/ingest/official.ts).
+  RETRIEVAL_QUOTAS: "site:4,partner:5,program:3,upload:4,official:3"
+  SESSION_TTL_HOURS: "72"
+  # Durable activity log for fine-tuning data (chat_turns + activity_events).
+  # 0 retention days = keep forever. ACTIVITY_HASH_SECRET (optional) is a Secret.
+  ACTIVITY_LOG_ENABLED: "true"
+  ACTIVITY_RETENTION_DAYS: "0"
+  # Browser auth: "Continue with Google" (any verified Google account, no domain
+  # restriction); x-api-key remains for server-to-server callers.
+  REQUIRE_GOOGLE_PROVIDER: "true"
+  # Frontend origin(s) allowed by CORS (expert-chatbot-frontend).
+  CORS_ORIGINS: https://edge.heubertapp.com
+  # CRM (Heubert's in-house crm-api, over MCP) is disabled: this is Heubert-specific data
+  # infra, not something a white-label deployment has access to. CRM_MCP_URL/
+  # CRM_EXCHANGE_SECRET/CRM_TENANT_ORIGIN are all unset (removed below, not just commented)
+  # -- see src/crm/client.ts for how a different MCP-based CRM provider could be plugged in
+  # later the same way Gmail/Drive already are.
+  # Intent classifier: TypeSafe Jev through OpenRouter (one ~400 ms decision call per turn;
+  # Gemini classifier only when Jev errors or exceeds JEV_TIMEOUT_MS). Consultant messages
+  # are PII-redacted before they leave the cluster. OPENROUTER_API_KEY must be added to the
+  # expert-ai-consultant-secrets Secret first; without it the pod logs an error and stays on gemini.
+  CLASSIFIER_PROVIDER: "jev"
+  JEV_MODEL: typesafe/jev-1.13
+  JEV_TIMEOUT_MS: "4000"
+  # Answer and research models: Z.ai GLM 4.7 Flash on Amazon Bedrock in ap-southeast-2 through
+  # the pod's IRSA role (serviceAccount below; eval 2026-10-12: ~70 tok/s in-region against
+  # 14–34 tok/s via OpenRouter). Prompts, including CRM evidence, stay in the Sydney region.
+  # The answer fallback stays Gemini GEMINI_FALLBACK_MODEL. To go back to DeepSeek V4.1 Flash,
+  # set both to openrouter:deepseek/deepseek-v4.1-flash; OPENROUTER_PROVIDER pins that to
+  # DeepInfra (US) and is unused while both are bedrock: models.
+  ANSWER_MODEL: bedrock:zai.glm-4.7-flash
+  RESEARCH_MODEL: bedrock:zai.glm-4.7-flash
+  BEDROCK_REGION: ap-southeast-2
+  OPENROUTER_PROVIDER: '{"only":["DeepInfra"],"require_parameters":true}'
+  # Google Workspace (Gmail, Drive, Calendar, Docs & Sheets), per consultant: each connects their
+  # own Google account from the account menu. OAuth client "Edge Workspace (Gmail + Drive MCP)" in
+  # GCP project <GCP_PROJECT_ID> (Internal). GOOGLE_WORKSPACE_CLIENT_SECRET and
+  # GOOGLE_TOKEN_ENC_KEY are credentials and live in the Secret. All four must be present or the
+  # pod (and the ingest CronJobs, which share this ConfigMap) fail to boot: the Secret must carry
+  # both credentials BEFORE a release with these lines is synced.
+  GOOGLE_WORKSPACE_CLIENT_ID: <GOOGLE_WORKSPACE_OAUTH_CLIENT_ID>.apps.googleusercontent.com
+  GOOGLE_WORKSPACE_REDIRECT_URI: https://edge.heubertapp.com/api/integrations/google/callback
+  # Only these domains may link Gmail/Drive/Calendar. Independent of sign-in (no restriction).
+  GOOGLE_WORKSPACE_ALLOWED_DOMAINS: heubert.com,experteducation.com.au
+  GOOGLE_WORKSPACE_TIMEOUT_MS: "15000"
+  # auto: Google's MCP servers, falling back to the Gmail/Drive/Calendar REST APIs while the MCP
+  # developer preview refuses this project. Set "rest" to never use the preview servers.
+  GOOGLE_WORKSPACE_TRANSPORT: auto
+  # Writes are always approval cards. Gmail drafts are never sent; a Calendar event's attendees are
+  # emailed an invite by Google on Approve; new Docs/Sheets are private to the consultant.
+  GMAIL_DRAFTS_ENABLED: "true"
+  GOOGLE_CALENDAR_EVENTS_ENABLED: "true"
+  GOOGLE_DOCS_CREATE_ENABLED: "true"
+
+externalSecret:
+  enabled: true
+  name: expert-ai-consultant-secrets
+
+# Own SA instead of production/default: its role (heubert-infra expert-ai-consultant-irsa.tf)
+# carries Bedrock invoke for bedrock: models plus the read of prod/expert-ai-consultant/*.
+serviceAccount:
+  create: true
+  name: expert-ai-consultant
+  roleArn: arn:aws:iam::<AWS_ACCOUNT_ID>:role/<IAM_ROLE_NAME>
+
+# Small stateless API sizing (heubert-infra/environments/prod/SIZING.md).
+resources:
+  requests:
+    cpu: 100m
+    memory: 384Mi
+  limits:
+    cpu: 300m
+    memory: 512Mi
+
+# Keep one pod available through node drains / Karpenter consolidation.
+pdb:
+  enabled: true
+  minAvailable: 1
+
+# Knowledge-base ingestion CronJobs (schedules/args inherited from values.yaml):
+# nightly incremental 01:00 AEST, weekly sweep Sat 23:00, reindex-request drain
+# every 30 min. Runs in its own pod with 1Gi so the API pods stay small.
+ingest:
+  enabled: true

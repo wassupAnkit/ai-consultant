@@ -1,0 +1,41 @@
+import type { PackDefinition } from "../types";
+
+/** New Zealand: Immigration New Zealand owns the visa, NZQA owns qualifications and the pastoral-care Code. */
+export const NEW_ZEALAND: PackDefinition = {
+  country: "new_zealand",
+  label: "New Zealand",
+  version: "2026-10-08",
+  officialSources: [
+    { domain: "immigration.govt.nz", authority: "immigration", topics: "all" },
+    { domain: "studywithnewzealand.govt.nz", authority: "student_portal", topics: "all" },
+    { domain: "nzqa.govt.nz", authority: "education_regulator", topics: ["program_selection", "university_selection", "eligibility_check", "onshore_support", "compliance_ethics", "alternative_pathways"] },
+    { domain: "education.govt.nz", authority: "government", topics: ["family_planning", "onshore_support", "policy_change", "compliance_ethics"] },
+    { domain: "employment.govt.nz", authority: "government", topics: ["work_survival", "onshore_support", "lifestyle_adaptation"] },
+    { domain: "ird.govt.nz", authority: "government", topics: ["work_survival", "lifestyle_adaptation"] },
+    { domain: "iaa.govt.nz", authority: "government", topics: ["compliance_ethics", "visa_risk_analysis"] },
+    { domain: "ielts.org", authority: "test_body", topics: ["test_preparation", "eligibility_check"] },
+    { domain: "pearsonpte.com", authority: "test_body", topics: ["test_preparation", "eligibility_check"] },
+  ],
+  vocabulary: {
+    visa_process: ["Fee Paying Student Visa", "offer of place", "Immigration Online", "evidence of funds", "outward travel", "medical certificate", "insurance requirement", "student visa conditions"],
+    visa_risk_analysis: ["genuine intentions", "bona fide student", "character requirement", "potentially prejudicial information letter", "visa decline reasons", "immigration history"],
+    document_preparation: ["offer of place", "evidence of funds", "Funds Transfer Scheme", "police certificate", "chest X-ray certificate", "financial undertaking", "medical certificate"],
+    application_process: ["offer of place", "entrance requirements", "conditional offer", "application portal", "Code of Practice signatory"],
+    offer_enrolment: ["offer of place", "tuition fee payment", "enrolment confirmation", "Funds Transfer Scheme", "refund policy"],
+    financial_viability: ["evidence of funds", "Funds Transfer Scheme", "living costs requirement", "insurance requirement", "tuition fees", "financial undertaking"],
+    scholarship_funding: ["Manaaki New Zealand Scholarships", "New Zealand Excellence Awards", "university international scholarship"],
+    migration_pathway: ["Post-study Work Visa", "Skilled Migrant Category", "Green List", "Accredited Employer Work Visa", "points system", "partner work visa"],
+    career_roi: ["Green List", "ANZSCO", "occupational registration", "Careers New Zealand", "labour market outcomes"],
+    work_survival: ["student visa work rights", "minimum wage", "IRD number", "Employment New Zealand", "holiday pay", "KiwiSaver"],
+    lifestyle_adaptation: ["Code of Practice pastoral care", "insurance requirement", "student accommodation", "biosecurity declaration", "IRD number"],
+    onshore_support: ["variation of conditions", "change of provider", "attendance and progress", "Code of Practice", "interim visa", "Tertiary Code"],
+    family_planning: ["partner of a student work visa", "dependent child student visa", "domestic fees for dependent children", "guardian visa", "partnership evidence"],
+    policy_change: ["Immigration New Zealand announcement", "operational manual", "Green List changes", "Post-study Work Visa changes", "immigration instructions"],
+    eligibility_check: ["entrance requirements", "University Entrance", "English language requirements", "International Qualifications Assessment"],
+    test_preparation: ["IELTS Academic", "PTE Academic", "TOEFL iBT", "Cambridge English", "LanguageCert"],
+    program_selection: ["NZQF level", "NZQA approved programme", "graduate diploma", "Post-study Work Visa eligible qualification", "level of study"],
+    university_selection: ["Code signatory", "NZQA category", "university", "private training establishment", "polytechnic"],
+    alternative_pathways: ["foundation programme", "diploma pathway", "English language school", "credit transfer"],
+    compliance_ethics: ["licensed immigration adviser", "Immigration Advisers Authority", "Code of Practice education agents", "exempt adviser"],
+  },
+};
